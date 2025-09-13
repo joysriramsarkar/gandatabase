@@ -1,0 +1,26 @@
+[
+  {
+    "songId": "S00001",
+    "title": "আমার সোনার বাংলা",
+    "artistId": ["RTS01"],
+    "lyricistId": "RTS01",
+    "composerId": "RTS01",
+    "lyricsId": "L0000001",
+    "parjaay": "স্বদেশ",
+    "genre": "রবীন্দ্রসংগীত",
+    "releaseYear": 1905,
+    "tags": ["দেশাত্মবোধক", "জাতীয় সংগীত", "বাংলাদেশ"]
+  },
+  {
+    "songId": "S00002",
+    "title": "কফি হাউসের সেই আড্ডাটা",
+    "artistId": ["MDY01"],
+    "lyricistId": "GPM01",
+    "composerId": "SKG01",
+    "lyricsId": "L0000002",
+    "parjaay": null,
+    "genre": "আধুনিক",
+    "releaseYear": 1983,
+    "tags": ["নস্টালজিয়া", "কলকাতা", "বন্ধুত্ব", "আড্ডা"]
+  }
+]

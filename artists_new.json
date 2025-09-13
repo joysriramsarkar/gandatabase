@@ -1,0 +1,58 @@
+[
+  {
+    "artistId": "RT01",
+    "name": "রবীন্দ্রনাথ ঠাকুর",
+    "type": ["কবি", "গীতিকার", "সুরকার"],
+    "era": "পঞ্চকবি",
+    "bio": "কবিগুরু রবীন্দ্রনাথ ঠাকুর ছিলেন একজন অগ্রণী বাঙালি কবি, ঔপন্যাসিক, সংগীতস্রষ্টা...",
+    "imageUrl": "https://www.nobelprize.org/images/tagore-12892-content-portrait-mobile-tiny.jpg"
+  },
+  {
+    "artistId": "KNI01",
+    "name": "কাজী নজরুল ইসলাম",
+    "type": ["কবি", "গীতিকার", "সুরকার"],
+    "era": "পঞ্চকবি",
+    "bio": "বিদ্রোহী কবি কাজী নজরুল ইসলাম...",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Kazi_nazrul_islam_with_Setar.jpg/1024px-Kazi_nazrul_islam_with_Setar.jpg"
+  },
+  {
+    "artistId": "MD01",
+    "name": "মান্না দে",
+    "type": ["শিল্পী"],
+    "era": "স্বর্ণযুগ",
+    "bio": "প্রবোধ চন্দ্র দে, যিনি মান্না দে নামে পরিচিত...",
+    "imageUrl": "url_to_manna_dey_image.jpg"
+  },
+  {
+    "artistId": "GPM01",
+    "name": "গোলাম মোহাম্মদ কাদের",
+    "type": ["গীতিকার", "সুরকার"],
+    "era": "আধুনিক",
+    "bio": "গোলাম মোহাম্মদ কাদের ছিলেন একজন প্রখ্যাত গীতিকার ও সুরকার...",
+    "imageUrl": "url_to_golam_mohammad_kader_image.jpg"
+  },
+  {
+    "artistId": "SDB01",
+    "name": "শচীন দেব বর্মন",
+    "type": ["সুরকার"],
+    "era": "আধুনিক",
+    "bio": "শচীন কুমার গাঙ্গুলি, যিনি এস. ডি. বর্মন নামে পরিচিত...",
+    "imageUrl": "url_to_sd_burman_image.jpg"
+  },
+  {
+    "artistId": "MGH01",
+    "name": "মহীনের ঘোড়াগুলি",
+    "type": ["ব্যান্ড"],
+    "era": "আধুনিক",
+    "bio": "মহীনের ঘোড়াগুলি একটি জনপ্রিয় বাংলা ব্যান্ড...",
+    "imageUrl": "url_to_maheen_image.jpg"
+  },
+  {
+    "artistId": "DLR01",
+    "name": "দ্বিজেন্দ্রলাল রায়",
+    "type": ["কবি", "গীতিকার", "সুরকার"],
+    "era": "পঞ্চকবি",
+    "bio": "দ্বিজেন্দ্রলাল রায় ছিলেন একজন প্রখ্যাত বাঙালি কবি, গীতিকার ও সুরকার...",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Dwijendra_Lal_Roy.jpg"
+  }
+]
