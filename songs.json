@@ -13,13 +13,13 @@
   },
   {
     "songId": "S00002",
-    "title": "কফি হাউসের সেই আড্ডাটা",
-    "artistId": ["MDY01"],
-    "lyricistId": "GPM01",
-    "composerId": "SKG01",
+    "title": "অকারণে অকালে মোর পড়ল যখন ডাক",
+    "artistId": ["RTS01"],
+    "lyricistId": "RTS01",
+    "composerId": "RTS01",
     "lyricsId": "L0000002",
     "parjaay": null,
-    "genre": "আধুনিক",
+    "genre": ["রবীন্দ্রসংগীত"],
     "releaseYear": 1983,
     "tags": ["নস্টালজিয়া", "কলকাতা", "বন্ধুত্ব", "আড্ডা"]
   }
