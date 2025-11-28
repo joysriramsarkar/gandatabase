@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics ID Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.download-btn {
+            background-color: #28a745;
+        }
+        button.download-btn:hover {
+            background-color: #218838;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .stats {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>গানের আইডি জেনারেটর</h2>
+    <p style="text-align: center;">শুরু এবং শেষের নম্বর দিয়ে 'Generate' এ ক্লিক করুন।</p>
+    
+    <div class="controls">
+        <input type="number" id="startId" value="1503" placeholder="Start">
+        <input type="number" id="endId" value="2000" placeholder="End">
+        <button onclick="generateIds()">তালিকা তৈরি করুন (Generate)</button>
+        <button onclick="copyToClipboard()">কপি করুন</button>
+        <button class="download-btn" onclick="downloadFile()">ফাইল ডাউনলোড করুন</button>
+    </div>
+
+    <textarea id="output" readonly></textarea>
+    <div class="stats" id="stats"></div>
+</div>
+
+<script>
+    function generateIds() {
+        const start = parseInt(document.getElementById('startId').value);
+        const end = parseInt(document.getElementById('endId').value);
+        const output = document.getElementById('output');
+        const stats = document.getElementById('stats');
+
+        if (start > end) {
+            alert("শুরুর নম্বরটি শেষের নম্বরের চেয়ে ছোট হতে হবে!");
+            return;
+        }
+
+        let result = "";
+        
+        for (let i = start; i <= end; i++) {
+            // ID format: L000xxxx. Assuming 7 digits padding roughly based on input L0001500 implies L + 7 chars length logic or strictly L000 + number
+            // L0001500 is 8 chars. L + 0001500. 
+            // If the number grows, padding might shrink? 
+            // Based on L0001500, it seems to be 'L' + number padded to 7 digits.
+            // Example: 1500 -> 0001500.
+            
+            const idNumber = i.toString().padStart(7, '0'); 
+            const formattedId = "L" + idNumber;
+
+            result += `    {
+        id: "${formattedId}",
+        lyrics: \`\`
+    },\n`;
+        }
+
+        output.value = result;
+        stats.innerText = `মোট এন্ট্রি: ${end - start + 1} টি`;
+    }
+
+    function copyToClipboard() {
+        const output = document.getElementById('output');
+        output.select();
+        document.execCommand('copy');
+        alert("টেক্সট কপি করা হয়েছে!");
+    }
+
+    function downloadFile() {
+        const text = document.getElementById('output').value;
+        if (!text) {
+            alert("আগে তালিকা তৈরি করুন!");
+            return;
+        }
+        const blob = new Blob([text], { type: "text/plain" });
+        const anchor = document.createElement("a");
+        anchor.download = "lyrics_data_1503_2000.js";
+        anchor.href = window.URL.createObjectURL(blob);
+        anchor.target = "_blank";
+        anchor.style.display = "none";
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    }
+
+    // Auto-generate on load for the requested range
+    window.onload = generateIds;
+</script>
+
+</body>
+</html>
