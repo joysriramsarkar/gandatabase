@@ -1,0 +1,225 @@
+﻿[
+  {
+    "songId": "S00001",
+    "title": "আমার সোনার বাংলা, আমি তোমায় ভালোবাসি",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000001",
+    "parjaay": null,
+    "genre": [
+      "Patriotic Song"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Bangladesh",
+      "National Anthem",
+      "Nature",
+      "Love",
+      "Bengali Culture"
+    ]
+  },
+  {
+    "songId": "S00002",
+    "title": "অকারণে অকালে মোর পড়ল যখন ডাক",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000002",
+    "parjaay": null,
+    "genre": [
+      "Rabindra Sangeet"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "death",
+      "spiritual",
+      "introspection"
+    ]
+  },
+  {
+    "songId": "S00003",
+    "title": "যদি তোর ডাক শুনে কেউ না আসে তবে একলা চলো রে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000003",
+    "parjaay": null,
+    "genre": [
+      "Patriotic",
+      "Inspirational"
+    ],
+    "releaseYear": 1905,
+    "tags": [
+      "Independence",
+      "Courage",
+      "Determination",
+      "Resilience",
+      "Bengali"
+    ]
+  },
+  {
+    "songId": "S00004",
+    "title": "অগ্নিবীণা বাজাও তুমি কেমন ক'রে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000004",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "spiritual",
+      "poetry",
+      "fire",
+      "music",
+      "creation"
+    ]
+  },
+  {
+    "songId": "S00005",
+    "title": "অগ্নিশিখা এসো এসো, আনো আনো আলো",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000005",
+    "parjaay": null,
+    "genre": [
+      "Devotional",
+      "Patriotic"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Agni",
+      "Light",
+      "Hope",
+      "Peace",
+      "Happiness",
+      "Well-being"
+    ]
+  },
+  {
+    "songId": "S00006",
+    "title": "অচেনাকে ভয় কী আমার ওরে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000006",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "hope",
+      "unknown",
+      "life",
+      "acceptance",
+      "spiritual"
+    ]
+  },
+  {
+    "songId": "S00007",
+    "title": "অজানা খনির নূতন মণির গেঁথেছি হার",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000007",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Rabindra Sangeet"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "nature",
+      "spring",
+      "love",
+      "newness"
+    ]
+  },
+  {
+    "songId": "S00008",
+    "title": "অজানা সুর কে দিয়ে যায় কানে কানে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000008",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Romantic"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "melancholy",
+      "nature",
+      "lost love",
+      "nostalgia"
+    ]
+  },
+  {
+    "songId": "S00009",
+    "title": "অজ্ঞানে করো হে ক্ষমা তাত, ধরি চরণে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000009",
+    "parjaay": null,
+    "genre": [
+      "Bengali Devotional Song"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "devotional",
+      "prayer",
+      "forgiveness",
+      "father"
+    ]
+  },
+  {
+    "songId": "S00010",
+    "title": "অধরা মাধুরী ধরেছি ছন্দোবন্ধনে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0000010",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "nature",
+      "bird",
+      "love",
+      "longing",
+      "beauty"
+    ]
+  }
+]
