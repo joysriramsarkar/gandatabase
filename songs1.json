@@ -10,15 +10,14 @@
     "lyricsId": "L0000001",
     "parjaay": null,
     "genre": [
-      "Patriotic Song"
+      "দেশাত্মবোধক"
     ],
-    "releaseYear": 1905,
+    "releaseYear": 2000,
     "tags": [
-      "Bangladesh",
-      "National Anthem",
-      "Nature",
-      "Love",
-      "Bengal"
+      "দেশ",
+      "প্রকৃতি",
+      "ভালোবাসা",
+      "বাংলা"
     ]
   },
   {
@@ -32,15 +31,13 @@
     "lyricsId": "L0000002",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "আধুনিক গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Death",
-      "Spirituality",
-      "Hope",
-      "Inner Strength"
+      "জীবন",
+      "মৃত্যু",
+      "আধ্যাত্মিক"
     ]
   },
   {
@@ -54,38 +51,39 @@
     "lyricsId": "L0000003",
     "parjaay": null,
     "genre": [
-      "Patriotic",
-      "Inspirational"
+      "রবীন্দ্রসংগীত",
+      "Patriotic Song"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Bengali Song",
-      "Courage",
-      "Independence",
-      "Solo Journey"
+      "inspiration",
+      "determination",
+      "loneliness",
+      "courage",
+      "solo",
+      "protest"
     ]
   },
   {
     "songId": "S00004",
     "title": "অগ্নিবীণা বাজাও তুমি কেমন ক'রে",
     "artistId": [
-      "RNT01"
+      "KNI01"
     ],
-    "lyricistId": "RNT01",
-    "composerId": "RNT01",
+    "lyricistId": "KNI01",
+    "composerId": "KNI01",
     "lyricsId": "L0000004",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "আধ্যাত্মিক",
+      "দেশাত্মবোধক"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Agni Veena",
-      "Inspiration",
-      "Creation",
-      "Pain",
-      "Devotion"
+      "অগ্নিবীণা",
+      "বিদ্রোহ",
+      "দেশপ্রেম",
+      "ঈশ্বর"
     ]
   },
   {
@@ -99,18 +97,16 @@
     "lyricsId": "L0000005",
     "parjaay": null,
     "genre": [
-      "Bengali Devotional Song",
-      "Patriotic Song"
+      "Devotional",
+      "Patriotic"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Agni",
-      "Light",
-      "Hope",
-      "Peace",
-      "Well-being",
-      "Goodness",
-      "Inspiration"
+      "আশা",
+      "আলো",
+      "শান্তি",
+      "শক্তি",
+      "দেশাত্মবোধক"
     ]
   },
   {
@@ -124,16 +120,14 @@
     "lyricsId": "L0000006",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "রবীন্দ্রসংগীত"
     ],
     "releaseYear": 2000,
     "tags": [
-      "hope",
-      "unknown",
-      "life",
-      "love",
-      "spiritual"
+      "অচেনা",
+      "জীবন",
+      "প্রেম",
+      "হৃদয়"
     ]
   },
   {
@@ -147,15 +141,14 @@
     "lyricsId": "L0000007",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Rabindra Sangeet"
+      "রবীন্দ্রসংগীত"
     ],
     "releaseYear": 2000,
     "tags": [
-      "nature",
-      "spring",
-      "newness",
-      "love"
+      "বসন্ত",
+      "প্রকৃতি",
+      "নতুন",
+      "রাগ"
     ]
   },
   {
@@ -169,15 +162,13 @@
     "lyricsId": "L0000008",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Rabindra Sangeet"
+      "আধুনিক গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "melancholy",
-      "nature",
-      "longing",
-      "spring"
+      "বিরহ",
+      "বসন্ত",
+      "প্রকৃতি"
     ]
   },
   {
@@ -191,16 +182,13 @@
     "lyricsId": "L0000009",
     "parjaay": null,
     "genre": [
-      "Devotional",
-      "Bengali Folk"
+      "ভক্তিগীতি"
     ],
     "releaseYear": 2000,
     "tags": [
-      " ক্ষমা",
-      "তাত",
-      "চরণ",
+      "ক্ষমা",
       "পাপ",
-      "পুত্র"
+      "ভুল"
     ]
   },
   {
@@ -220,10 +208,10 @@
     "releaseYear": 2000,
     "tags": [
       "love",
+      "nature",
       "bird",
-      "spring",
-      "melancholy",
-      "nature"
+      "nostalgia",
+      "spring"
     ]
   },
   {
@@ -237,15 +225,15 @@
     "lyricsId": "L0005000",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "ভক্তিগীতি",
+      "রবীন্দ্রসংগীত"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Puja",
-      "Devotion",
-      "Offering",
-      "Dance"
+      "পূজা",
+      "অঞ্জলি",
+      "নৃত্য",
+      "আরতি"
     ]
   },
   {
@@ -259,15 +247,14 @@
     "lyricsId": "L0005001",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
+      "Bhakti",
       "Devotional"
     ],
     "releaseYear": 2000,
     "tags": [
-      "devotion",
-      "longing",
-      "spiritual",
-      "yearning"
+      "বিরহ",
+      "আরাধনা",
+      "আত্মসমর্পণ"
     ]
   },
   {
@@ -281,15 +268,15 @@
     "lyricsId": "L0005002",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "আধুনিক গান",
+      "ভক্তিগীতি"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Durga Puja",
-      "Asura",
-      " দেবী দুর্গা",
-      "দশভূজা"
+      "দুর্গা",
+      "দেবী",
+      "অসুর",
+      "পূজা"
     ]
   },
   {
@@ -303,37 +290,35 @@
     "lyricsId": "L0005003",
     "parjaay": null,
     "genre": [
-      "Bhajan",
-      "Devotional"
+      "ভক্তিগীতি",
+      "হিন্দুধর্মীয় গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Narayan",
-      "Vishnu",
-      "Hinduism",
-      "Mantra",
-      "Devotion"
+      "নারায়ণ",
+      "বিষ্ণু",
+      "জপ",
+      "ভক্তি"
     ]
   },
   {
     "songId": "S00015",
     "title": "অগ্নি-ঋষি! অগ্নি-বীণা তোমায় শুধু সাজে",
     "artistId": [
-      "RNT01"
+      "KNI01"
     ],
-    "lyricistId": "RNT01",
-    "composerId": "RNT01",
+    "lyricistId": "KNI01",
+    "composerId": "KNI01",
     "lyricsId": "L0005004",
     "parjaay": null,
     "genre": [
-      "Patriotic Song"
+      "দেশাত্মবোধক"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Revolutionary",
-      "Fire",
-      "Poetry",
-      "Nazrul"
+      "অগ্নি",
+      "বিদ্রোহ",
+      "দেশ"
     ]
   },
   {
@@ -347,39 +332,34 @@
     "lyricsId": "L0005005",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "ভক্তিগীতি"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Annapurna",
-      "Goddess",
-      "Puja",
-      "Festival",
-      "Blessing",
-      "Poverty"
+      "অন্নপূর্ণা",
+      "দুর্গা",
+      "হিন্দু",
+      "ভক্তি"
     ]
   },
   {
     "songId": "S00017",
     "title": "অগ্নি-গিরি ঘুমন্ত উঠিল জাগিয়া",
     "artistId": [
-      "RNT01"
+      "KNI01"
     ],
-    "lyricistId": "RNT01",
-    "composerId": "RNT01",
+    "lyricistId": "KNI01",
+    "composerId": "KNI01",
     "lyricsId": "L0005006",
     "parjaay": null,
     "genre": [
-      "Patriotic Song"
+      "দেশাত্মবোধক"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Revolution",
-      "Agni",
-      "Hinduism",
-      "Shiva",
-      "Anger"
+      "বিপ্লবী",
+      "অগ্নি",
+      "দেশ"
     ]
   },
   {
@@ -393,16 +373,17 @@
     "lyricsId": "L0005007",
     "parjaay": null,
     "genre": [
-      "Islamic",
-      "Bengali Folk"
+      "ইসলামিক",
+      "ইসলামী সংগীত",
+      "গজল"
     ],
     "releaseYear": 2000,
     "tags": [
-      "M Medina",
-      "Sorrow",
-      "Loss",
-      "Islam",
-      "Religious"
+      "মদিনা",
+      "শোক",
+      "বেদনা",
+      "ইসলাম",
+      "আরব"
     ]
   },
   {
@@ -416,15 +397,15 @@
     "lyricsId": "L0005008",
     "parjaay": null,
     "genre": [
-      "Children's Song",
-      "Nonsense Song"
+      "Nursery Rhyme",
+      "Children's Song"
     ],
     "releaseYear": 2000,
     "tags": [
-      "humor",
-      "nose",
-      "slapstick",
-      "Bengali Rhyme"
+      "Funny",
+      "Nose",
+      "Bengali Rhyme",
+      "Humorous"
     ]
   },
   {
@@ -438,16 +419,14 @@
     "lyricsId": "L0005009",
     "parjaay": null,
     "genre": [
-      "Folk",
-      "Baul"
+      "লোকসংগীত",
+      "বাউল"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Revenge",
-      "Punishment",
-      "Love",
-      "Pain",
-      "Bengali Folk"
+      "বিরহ",
+      "শাস্তি",
+      "যন্ত্রণা"
     ]
   },
   {
@@ -461,15 +440,13 @@
     "lyricsId": "L0005010",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Melancholy"
+      "আধুনিক বাংলা গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "sorrow",
-      "pathos",
-      "nature",
-      "nostalgia"
+      "বিরহ",
+      "প্রকৃতি",
+      "মালিন্য"
     ]
   },
   {
@@ -483,15 +460,14 @@
     "lyricsId": "L0005011",
     "parjaay": null,
     "genre": [
-      "Rabindra Sangeet",
-      " বর্ষার গান (Monsoon Song)"
+      "বর্ষার গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "বৃষ্টি (Rain)",
-      "প্রকৃতি (Nature)",
-      "বিরহ (Separation)",
-      "বেদনা (Sorrow)"
+      "প্রকৃতি",
+      "বৃষ্টি",
+      "বিরহ",
+      "বিষাদ"
     ]
   },
   {
@@ -505,15 +481,13 @@
     "lyricsId": "L0005016",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "আধুনিক গান"
     ],
     "releaseYear": 2000,
     "tags": [
-      "sorrow",
-      "river",
-      "devotion",
-      "Hinduism"
+      "বিরহ",
+      "বেদনা",
+      "কান্না"
     ]
   },
   {
@@ -527,17 +501,15 @@
     "lyricsId": "L0005018",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "আধ্যাত্মিক",
+      "ভক্তিগীতি"
     ],
     "releaseYear": 2000,
     "tags": [
-      "love",
-      "light",
-      "devotion",
-      "hope",
-      "poverty",
-      "divine"
+      "প্রেম",
+      "আলো",
+      "জীবন",
+      "ঈশ্বর"
     ]
   },
   {
@@ -551,16 +523,15 @@
     "lyricsId": "L0005019",
     "parjaay": null,
     "genre": [
-      "Bengali Folk",
-      "Devotional"
+      "Bhakti",
+      "Bhajan"
     ],
     "releaseYear": 2000,
     "tags": [
-      "Krishna",
       "Radha",
-      "Devotion",
-      "Love",
-      "Spiritual"
+      "Shyam",
+      "Krishna",
+      "Brijdham"
     ]
   }
 ]

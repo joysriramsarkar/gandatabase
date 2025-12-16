@@ -27,12 +27,9 @@ DEFAULT_ID = "RNT01"
 # -------------------------------------------
 
 # গ্লোবাল ভেরিয়েবল
-model = None
-
 def setup_ai():
     """এআই সেটআপ এবং মডেল সিলেকশন"""
-    global model
-    if not USE_AI: return
+    if not USE_AI: return None
 
     genai.configure(api_key=GOOGLE_API_KEY)
     
@@ -60,42 +57,40 @@ def setup_ai():
 
         if selected_model:
             print(f"   [সফল] নির্বাচিত মডেল: {selected_model}")
-            model = genai.GenerativeModel(selected_model)
+            return genai.GenerativeModel(selected_model)
         else:
             print("   [ত্রুটি] কোনো উপযুক্ত মডেল পাওয়া যায়নি।")
+            return None
             
     except Exception as e:
         print(f"   [ত্রুটি] মডেল সেটআপে সমস্যা: {e}")
+        return None
 
 def load_artists_map(filepath):
     """artists.json থেকে নাম এবং আইডির ম্যাপ তৈরি করে"""
     if not os.path.exists(filepath):
         print(f"   সতর্কতা: '{filepath}' পাওয়া যায়নি।")
         return {}
-    
+
     try:
-        with open(filepath, 'r', encoding='utf-8') as f: # utf-8-sig বাদ দেওয়া হলো যদি সমস্যা করে
+        # utf-8-sig ব্যবহার করলে BOM (Byte Order Mark) সহ এবং ছাড়া উভয় ফাইলই সঠিকভাবে পড়া যায়
+        with open(filepath, 'r', encoding='utf-8-sig') as f:
             data = json.load(f)
-    except:
-        try:
-            with open(filepath, 'r', encoding='utf-8-sig') as f:
-                data = json.load(f)
-        except Exception as e:
-            print(f"   আর্টিস্ট ফাইল পড়তে সমস্যা: {e}")
-            return {}
-    
+    except (FileNotFoundError, json.JSONDecodeError, UnicodeDecodeError) as e:
+        print(f"   আর্টিস্ট ফাইল '{filepath}' পড়তে সমস্যা: {e}")
+        return {}
+
     artist_map = {}
     for artist in data:
-        if not artist.get('id') or artist.get('id') == "01": continue
-        
-        norm_name = artist['name'].strip().lower()
-        artist_map[norm_name] = artist['id']
-        
-        if 'alias' in artist:
-            aliases = artist['alias'] if isinstance(artist['alias'], list) else [artist['alias']]
+        artist_id = artist.get('id')
+        artist_name = artist.get('name')
+        if artist_id and artist_name and artist_id != "01":
+            artist_map[artist_name.strip().lower()] = artist_id
+            
+            aliases = artist.get('alias', [])
+            aliases = aliases if isinstance(aliases, list) else [aliases]
             for alias in aliases:
-                artist_map[alias.strip().lower()] = artist['id']
-    
+                artist_map[alias.strip().lower()] = artist_id
     return artist_map
 
 def get_ids_from_names(names, artist_map):
@@ -115,7 +110,7 @@ def get_ids_from_names(names, artist_map):
     
     return list(set(ids))
 
-def get_metadata_from_ai(title, lyrics_snippet):
+def get_metadata_from_ai(model, title, lyrics_snippet):
     """জেমিনি এপিআই কল"""
     if not model: return None
 
@@ -133,7 +128,8 @@ def get_metadata_from_ai(title, lyrics_snippet):
         "release_year": Integer,
         "tags": ["String"]
     }}
-    If artist is Rabindranath Tagore, use exactly "Rabindranath Tagore".
+    IMPORTANT: Return names in BENGALI script (e.g. "কাজী নজরুল ইসলাম", "রবীন্দ্রনাথ ঠাকুর") matching standard spelling.
+    If artist is Rabindranath Tagore, use "রবীন্দ্রনাথ ঠাকুর".
     """
     
     retries = 3
@@ -143,21 +139,25 @@ def get_metadata_from_ai(title, lyrics_snippet):
             response = model.generate_content(prompt)
             
             # রেসপন্স ক্লিন করা
-            text_resp = response.text
-            start = text_resp.find('{')
-            end = text_resp.rfind('}') + 1
-            if start != -1 and end != -1:
-                return json.loads(text_resp[start:end])
+            text_resp = response.text.strip()
+            json_match = re.search(r'```json\s*(\{.*?\})\s*```', text_resp, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                start = text_resp.find('{')
+                end = text_resp.rfind('}') + 1
+                json_str = text_resp[start:end] if start != -1 and end != -1 else None
+
+            if json_str:
+                return json.loads(json_str)
             return None
-            
         except Exception as e:
             print(f"      (চেষ্টা {attempt+1}/{retries} ব্যর্থ: {e})")
-            time.sleep(3)
-    
+            time.sleep(3 * (attempt + 1)) # ব্যর্থ হলে পরের বার বেশি সময় অপেক্ষা করা
     return None
 
 def main():
-    setup_ai()
+    model = setup_ai()
     artist_map = load_artists_map(ARTISTS_FILE)
 
     if not os.path.exists(LYRICS_FILE):
@@ -204,18 +204,18 @@ def main():
 
         # ডিফল্ট মেটাডাটা
         meta = {
-            "artistId": [DEFAULT_ID],
-            "lyricistId": DEFAULT_ID,
-            "composerId": DEFAULT_ID,
-            "genre": ["রবীন্দ্রসংগীত"],
-            "tags": ["রবীন্দ্রসংগীত"],
+            "artistId": [],
+            "lyricistId": None,
+            "composerId": None,
+            "genre": [],
+            "tags": [],
             "releaseYear": 2000
         }
 
         # এআই কল
         if model:
             print(f"   [{counter}] প্রসেসিং: {final_title}")
-            ai_data = get_metadata_from_ai(final_title, clean_text[:200])
+            ai_data = get_metadata_from_ai(model, final_title, clean_text[:200])
             
             if ai_data:
                 meta["genre"] = ai_data.get("genre", meta["genre"])
@@ -231,8 +231,20 @@ def main():
 
                 a_ids = get_ids_from_names(ai_data.get("artist_names", []), artist_map)
                 if a_ids: meta["artistId"] = a_ids
-                elif meta["lyricistId"] != DEFAULT_ID:
-                    meta["artistId"] = [meta["lyricistId"]]
+        
+        # ফলব্যাক লজিক (যদি এআই কিছু না পায় তবেই ডিফল্ট সেট হবে)
+        if not meta["lyricistId"]: meta["lyricistId"] = DEFAULT_ID
+        if not meta["composerId"]: meta["composerId"] = DEFAULT_ID
+        
+        if not meta["artistId"]:
+            # যদি গীতিকার পাওয়া যায় এবং তিনি ডিফল্ট (রবীন্দ্রনাথ) না হন, তবে গীতিকারকেই আর্টিস্ট ধরবো (নজরুলের ক্ষেত্রে প্রযোজ্য)
+            if meta["lyricistId"] != DEFAULT_ID:
+                meta["artistId"] = [meta["lyricistId"]]
+            else:
+                meta["artistId"] = [DEFAULT_ID]
+        
+        if not meta["genre"]: meta["genre"] = ["রবীন্দ্রসংগীত"]
+        if not meta["tags"]: meta["tags"] = ["রবীন্দ্রসংগীত"]
 
         # গানের অবজেক্ট
         song_entry = {
