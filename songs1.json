@@ -12,13 +12,13 @@
     "genre": [
       "Patriotic Song"
     ],
-    "releaseYear": 2000,
+    "releaseYear": 1905,
     "tags": [
       "Bangladesh",
       "National Anthem",
       "Nature",
       "Love",
-      "Bengali Culture"
+      "Bengal"
     ]
   },
   {
@@ -32,13 +32,15 @@
     "lyricsId": "L0000002",
     "parjaay": null,
     "genre": [
-      "Rabindra Sangeet"
+      "Bengali Folk",
+      "Devotional"
     ],
     "releaseYear": 2000,
     "tags": [
-      "death",
-      "spiritual",
-      "introspection"
+      "Death",
+      "Spirituality",
+      "Hope",
+      "Inner Strength"
     ]
   },
   {
@@ -55,13 +57,12 @@
       "Patriotic",
       "Inspirational"
     ],
-    "releaseYear": 1905,
+    "releaseYear": 2000,
     "tags": [
-      "Independence",
+      "Bengali Song",
       "Courage",
-      "Determination",
-      "Resilience",
-      "Bengali"
+      "Independence",
+      "Solo Journey"
     ]
   },
   {
@@ -80,11 +81,11 @@
     ],
     "releaseYear": 2000,
     "tags": [
-      "spiritual",
-      "poetry",
-      "fire",
-      "music",
-      "creation"
+      "Agni Veena",
+      "Inspiration",
+      "Creation",
+      "Pain",
+      "Devotion"
     ]
   },
   {
@@ -98,8 +99,8 @@
     "lyricsId": "L0000005",
     "parjaay": null,
     "genre": [
-      "Devotional",
-      "Patriotic"
+      "Bengali Devotional Song",
+      "Patriotic Song"
     ],
     "releaseYear": 2000,
     "tags": [
@@ -107,8 +108,9 @@
       "Light",
       "Hope",
       "Peace",
-      "Happiness",
-      "Well-being"
+      "Well-being",
+      "Goodness",
+      "Inspiration"
     ]
   },
   {
@@ -130,7 +132,7 @@
       "hope",
       "unknown",
       "life",
-      "acceptance",
+      "love",
       "spiritual"
     ]
   },
@@ -152,8 +154,8 @@
     "tags": [
       "nature",
       "spring",
-      "love",
-      "newness"
+      "newness",
+      "love"
     ]
   },
   {
@@ -168,14 +170,14 @@
     "parjaay": null,
     "genre": [
       "Bengali Folk",
-      "Romantic"
+      "Rabindra Sangeet"
     ],
     "releaseYear": 2000,
     "tags": [
       "melancholy",
       "nature",
-      "lost love",
-      "nostalgia"
+      "longing",
+      "spring"
     ]
   },
   {
@@ -189,14 +191,16 @@
     "lyricsId": "L0000009",
     "parjaay": null,
     "genre": [
-      "Bengali Devotional Song"
+      "Devotional",
+      "Bengali Folk"
     ],
     "releaseYear": 2000,
     "tags": [
-      "devotional",
-      "prayer",
-      "forgiveness",
-      "father"
+      " ক্ষমা",
+      "তাত",
+      "চরণ",
+      "পাপ",
+      "পুত্র"
     ]
   },
   {
@@ -211,15 +215,352 @@
     "parjaay": null,
     "genre": [
       "Bengali Folk",
+      "Romantic"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "love",
+      "bird",
+      "spring",
+      "melancholy",
+      "nature"
+    ]
+  },
+  {
+    "songId": "S00011",
+    "title": "অঞ্জলি লহ মোর সঙ্গীতে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005000",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
       "Devotional"
     ],
     "releaseYear": 2000,
     "tags": [
-      "nature",
-      "bird",
-      "love",
+      "Puja",
+      "Devotion",
+      "Offering",
+      "Dance"
+    ]
+  },
+  {
+    "songId": "S00012",
+    "title": "অনাদরে স্বামী প’ড়ে আছি আমি তব কোলে তুলে নাও",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005001",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "devotion",
       "longing",
-      "beauty"
+      "spiritual",
+      "yearning"
+    ]
+  },
+  {
+    "songId": "S00013",
+    "title": "অসুর-বাড়ির ফেরত এ মা",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005002",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Durga Puja",
+      "Asura",
+      " দেবী দুর্গা",
+      "দশভূজা"
+    ]
+  },
+  {
+    "songId": "S00014",
+    "title": "অবিরাম জপ মন নারায়ণ নারায়ণ",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005003",
+    "parjaay": null,
+    "genre": [
+      "Bhajan",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Narayan",
+      "Vishnu",
+      "Hinduism",
+      "Mantra",
+      "Devotion"
+    ]
+  },
+  {
+    "songId": "S00015",
+    "title": "অগ্নি-ঋষি! অগ্নি-বীণা তোমায় শুধু সাজে",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005004",
+    "parjaay": null,
+    "genre": [
+      "Patriotic Song"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Revolutionary",
+      "Fire",
+      "Poetry",
+      "Nazrul"
+    ]
+  },
+  {
+    "songId": "S00016",
+    "title": "অন্নপূর্ণা মা এসেছে অন্নহীনের ঘর",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005005",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Annapurna",
+      "Goddess",
+      "Puja",
+      "Festival",
+      "Blessing",
+      "Poverty"
+    ]
+  },
+  {
+    "songId": "S00017",
+    "title": "অগ্নি-গিরি ঘুমন্ত উঠিল জাগিয়া",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005006",
+    "parjaay": null,
+    "genre": [
+      "Patriotic Song"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Revolution",
+      "Agni",
+      "Hinduism",
+      "Shiva",
+      "Anger"
+    ]
+  },
+  {
+    "songId": "S00018",
+    "title": "অসীম বেদনায় কাঁদে মদিনাবাসী",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005007",
+    "parjaay": null,
+    "genre": [
+      "Islamic",
+      "Bengali Folk"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "M Medina",
+      "Sorrow",
+      "Loss",
+      "Islam",
+      "Religious"
+    ]
+  },
+  {
+    "songId": "S00019",
+    "title": "অ-মা! তোমার বাবার নাকে কে মেরেছে ল্যাং?",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005008",
+    "parjaay": null,
+    "genre": [
+      "Children's Song",
+      "Nonsense Song"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "humor",
+      "nose",
+      "slapstick",
+      "Bengali Rhyme"
+    ]
+  },
+  {
+    "songId": "S00020",
+    "title": "অনেক জ্বালা দিয়েছ তার শাস্তি পাবে কালা",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005009",
+    "parjaay": null,
+    "genre": [
+      "Folk",
+      "Baul"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Revenge",
+      "Punishment",
+      "Love",
+      "Pain",
+      "Bengali Folk"
+    ]
+  },
+  {
+    "songId": "S00021",
+    "title": "অচেনা সুরে অজানা পথিক",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005010",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Melancholy"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "sorrow",
+      "pathos",
+      "nature",
+      "nostalgia"
+    ]
+  },
+  {
+    "songId": "S00022",
+    "title": "অবিরত বাদর বরষিছে ঝরঝর",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005011",
+    "parjaay": null,
+    "genre": [
+      "Rabindra Sangeet",
+      " বর্ষার গান (Monsoon Song)"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "বৃষ্টি (Rain)",
+      "প্রকৃতি (Nature)",
+      "বিরহ (Separation)",
+      "বেদনা (Sorrow)"
+    ]
+  },
+  {
+    "songId": "S00023",
+    "title": "অবুঝ মোর আঁখি বারি, আমি রোধিতে নারি",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005016",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "sorrow",
+      "river",
+      "devotion",
+      "Hinduism"
+    ]
+  },
+  {
+    "songId": "S00024",
+    "title": "অন্তরে প্রেমের দীপ জ্বলে যার",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005018",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "love",
+      "light",
+      "devotion",
+      "hope",
+      "poverty",
+      "divine"
+    ]
+  },
+  {
+    "songId": "S00025",
+    "title": "অ্যগ্যর তুম রাধা হোতে শ্যাম",
+    "artistId": [
+      "RNT01"
+    ],
+    "lyricistId": "RNT01",
+    "composerId": "RNT01",
+    "lyricsId": "L0005019",
+    "parjaay": null,
+    "genre": [
+      "Bengali Folk",
+      "Devotional"
+    ],
+    "releaseYear": 2000,
+    "tags": [
+      "Krishna",
+      "Radha",
+      "Devotion",
+      "Love",
+      "Spiritual"
     ]
   }
 ]
