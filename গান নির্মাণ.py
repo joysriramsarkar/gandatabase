@@ -12,7 +12,6 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # Try importing the new library
 try:
     from google import genai
-    from google.genai import types
     HAS_NEW_GENAI = True
 except ImportError:
     HAS_NEW_GENAI = False
@@ -237,8 +236,7 @@ def parse_lyrics_file(filepath, artist_map):
         else:
             # Try to find if any artist name is IN the comment
             # e.g. "কাজী নজরুল ইসলাম" in "/* কাজী নজরুল ইসলাম */" (already stripped)
-            # or "এখান থেকে বুব্ধদেব মহন্ত লিখেছেন" -> "বুব্ধদেব মহন্ত" ?? Typo in file?
-            # "বুব্ধদেব মহন্ত" is not in artists.json? Let's check artists.json
+           
 
             # Let's try closest match for the whole comment string against keys
             matches = get_close_matches(artist_key, artist_map.keys(), n=1, cutoff=0.8)
