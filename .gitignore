@@ -28,4 +28,9 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
 কপিরাইট_লিরিক্স.ts
