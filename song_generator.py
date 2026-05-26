@@ -245,7 +245,6 @@ def parse_lyrics_file(filepath, artist_map):
 
         if found_id:
             current_artist_id = found_id
-            # print(f"   [আর্টিস্ট পরিবর্তন] {comment} -> {found_id}")
         else:
             # If comment is not an artist (e.g. "এই লিরিক্সের..."), keep previous artist
             pass
@@ -294,7 +293,6 @@ def main():
         # ডুপ্লিকেট চেক (টাইটেল দিয়ে)
         check_key = re.sub(r'\s+', '', final_title)
         if check_key in seen_titles:
-            # print(f"   [বাদ - ডুপ্লিকেট] {final_title}")
             continue
         seen_titles.add(check_key)
 
