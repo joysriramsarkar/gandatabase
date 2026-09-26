@@ -1,45 +1,99 @@
-# Lyrics Processor
+# বাংলা গানের ডেটাবেস (Gandatabase v2)
 
-This project extracts Bengali lyrics from a TypeScript file (`lyrics.ts`), processes them, and generates a JSON database (`songs.json`). It can optionally use Google's Gemini AI to enrich the metadata (Artist, Composer, Genre, Release Year, etc.).
+> **Source of Truth** — বাংলা সংগীতের structured knowledge base।
 
-## Prerequisites
+---
 
-- Python 3.8 or higher
-- A Google Cloud API Key (for Gemini AI features, optional)
+## Schema Overview
 
-## Installation
+Core chain: **Artist → Work → Recording → Release → Film**
 
-1. Install the required dependencies:
+---
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Repository Structure
 
-2. (Optional) Set up your Google API Key:
-   - Create a `.env` file in the project root.
-   - Add your API key:
-     ```
-     GOOGLE_API_KEY=your_api_key_here
-     ```
+`
+gandatabase/
+├── data/                         # Entity data
+│   ├── artists/ works/ recordings/
+│   ├── releases/ films/ lyrics/
+│   ├── genres/ languages/
+│   ├── sources/ aliases/
+│   └── relationships/
+├── schema/                       # 12 JSON Schema files
+├── scripts/                      # import, validate, normalize, etc.
+├── docs/                         # schema.md, id-strategy.md, validation-rules.md
+├── tests/
+├── .github/workflows/validate.yml
+├── .gitignore
+└── README.md
+`
 
-## Usage
+---
 
-Run the script to process the lyrics:
+## Legacy Files
 
-```bash
-python "গান নির্মাণ.py"
-```
+Kept for migration reference:
+- songs.json, artists.json, lyrics.ts, artists_new.json
+- song_generator.py, ID_generator.html (deprecated)
 
-The script will:
-1. Read `lyrics.ts`.
-2. Extract lyrics and IDs.
-3. Check for duplicates.
-4. (If API key is present) Query Gemini AI for metadata.
-5. Save the result to `songs.json`.
+`ash
+python scripts/import/migrate_v1_to_v2.py --input-dir ./ --output-dir ./v2_output
+`
 
-## Files
+---
 
-- `lyrics.ts`: The source file containing lyrics.
-- `artists.json`: A database of artists for ID mapping.
-- `songs.json`: The output JSON file.
-- `গান নির্মাণ.py`: The main processing script.
+## Validation (Every PR)
+
+1. JSON Schema Validation
+2. Cross-Reference Check
+3. Duplicate Detection (fuzzy match)
+4. Year Range (1700-2100)
+5. Source Check (verified needs sources)
+6. AI Data Check (AI NEVER auto-verified)
+
+---
+
+## AI Policy
+
+AI is a research assistant only:
+
+✅ Can: suggest metadata, detect duplicates, transliterate, generate tokens, suggest relations
+❌ Cannot: auto-verify, write final data, set verified status, override human review, create sources
+
+All AI data: data_origin=ai_suggestion, verification_status=pending
+
+---
+
+## Verification Workflow
+
+raw data → Parser → AI suggestion → Validation → Human review → Verified
+                                         ↑
+                               AI stays PENDING
+
+---
+
+## Related Repos
+
+| Repository | Role |
+|---|---|
+| gandatabase | Source of Truth |
+| banglagan | Web platform |
+| banglagan_android_app | Android client |
+| banglagan-api (future) | REST API |
+
+---
+
+## Contributing
+
+- Never submit AI data as verified
+- Always cite sources (source_ids)
+- Check for duplicates
+- Use proper ID format (ART000001)
+- See অবদান.md for full guidelines
+
+---
+
+## License
+
+Educational/research use. Song lyrics subject to copyright.

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "genre.schema.json",
+  "title": "Genre",
+  "description": "সংগীত ধারা/বিভাগ। Taxonomy open-ended, ভবিষ্যতে নতুন genre যোগ করা যাবে।",
+  "type": "object",
+  "required": ["id", "name_bn", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^GEN\\d{6}$"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name_bn": {
+      "type": "string",
+      "description": "বাংলায় নাম (যেমন: রবীন্দ্রসংগীত, নজরুলগীতি)"
+    },
+    "name_en": {
+      "type": ["string", "null"]
+    },
+    "parent_genre_id": {
+      "type": ["string", "null"],
+      "pattern": "^GEN\\d{6}$",
+      "description": "পরিবার/genre parent (যেমন রবীন্দ্রসংগীত → ভারতীয় শাস্ত্রীয়)"
+    },
+    "category": {
+      "type": ["string", "null"],
+      "enum": [
+        "classical", "semi_classical", "modern", "folk",
+        "film", "devotional", "patriotic", "instrumental",
+        "western", "fusion", "other"
+      ]
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "region": {
+      "type": ["string", "null"],
+      "description": "কোন অঞ্চলে জন্মেছে/বিকশিত হয়েছে"
+    },
+    "era": {
+      "type": ["string", "null"],
+      "description": "প্রধান যুগ (যেমন: 1900-1950)"
+    },
+    "related_genres": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^GEN\\d{6}$" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

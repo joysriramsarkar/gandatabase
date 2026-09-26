@@ -1,0 +1,238 @@
+[
+  {
+    "id": "GEN000001",
+    "uuid": "dabfa57d-947b-49e8-b791-54d6664203dd",
+    "name_bn": "রবীন্দ্রসংগীত",
+    "name_en": "Rabindrasangeet",
+    "category": "semi_classical",
+    "description": "কবিগুরু রবীন্দ্রনাথ ঠাকুর রচিত ও সুরারোপিত গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553511+00:00",
+    "updated_at": "2026-09-17T12:35:16.553519+00:00"
+  },
+  {
+    "id": "GEN000002",
+    "uuid": "958698a2-6b65-4619-947f-607bd41646f8",
+    "name_bn": "নজরুলগীতি",
+    "name_en": "Nazrulgeeti",
+    "category": "semi_classical",
+    "description": "বিদ্রোহী কবি কাজী নজরুল ইসলাম রচিত গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553532+00:00",
+    "updated_at": "2026-09-17T12:35:16.553535+00:00"
+  },
+  {
+    "id": "GEN000003",
+    "uuid": "46d623c2-c28b-4cc2-8fe4-a04b0381c5c7",
+    "name_bn": "দ্বিজেন্দ্রগীতি",
+    "name_en": "Dwijendrageeti",
+    "category": "semi_classical",
+    "description": "দ্বিজেন্দ্রলাল রায়ের গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553543+00:00",
+    "updated_at": "2026-09-17T12:35:16.553545+00:00"
+  },
+  {
+    "id": "GEN000004",
+    "uuid": "327e61cd-c3d5-458d-84f0-599160e30da4",
+    "name_bn": "অতুলপ্রসাদী",
+    "name_en": "Atulprasadi",
+    "category": "semi_classical",
+    "description": "অতুলপ্রসাদ সেনের গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553553+00:00",
+    "updated_at": "2026-09-17T12:35:16.553556+00:00"
+  },
+  {
+    "id": "GEN000005",
+    "uuid": "1e58ad02-96fa-4c33-a888-ddd4c7c5711a",
+    "name_bn": "রজনীকান্তের গান",
+    "name_en": "Rajanikanta Geeti",
+    "category": "semi_classical",
+    "description": "কান্তকবি রজনীকান্ত সেনের গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553563+00:00",
+    "updated_at": "2026-09-17T12:35:16.553565+00:00"
+  },
+  {
+    "id": "GEN000006",
+    "uuid": "c48c2f07-db59-42b6-9360-137998ef4171",
+    "name_bn": "আধুনিক বাংলা গান",
+    "name_en": "Modern Bengali Song",
+    "category": "modern",
+    "description": "আধুনিক যুগের বাংলা মেলোডিয়াস গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553572+00:00",
+    "updated_at": "2026-09-17T12:35:16.553574+00:00"
+  },
+  {
+    "id": "GEN000007",
+    "uuid": "f7bb75b6-f173-41d0-8f08-36f895268352",
+    "name_bn": "চলচ্চিত্রের গান",
+    "name_en": "Film Soundtrack",
+    "category": "film",
+    "description": "বাংলা চলচ্চিত্রের সাউন্ডট্র্যাক ও গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553581+00:00",
+    "updated_at": "2026-09-17T12:35:16.553583+00:00"
+  },
+  {
+    "id": "GEN000008",
+    "uuid": "8c9749d5-531a-4d90-91dd-fc201f0e9017",
+    "name_bn": "লোকগীতি",
+    "name_en": "Folk Song",
+    "category": "folk",
+    "description": "বাংলার চিরায়ত মাটির গান ও লোকঐতিহ্য",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553594+00:00",
+    "updated_at": "2026-09-17T12:35:16.553596+00:00"
+  },
+  {
+    "id": "GEN000009",
+    "uuid": "1ccb6f1c-e849-4614-beea-f72cf7862b20",
+    "name_bn": "বাউল গান",
+    "name_en": "Baul Song",
+    "category": "folk",
+    "description": "বাউল দর্শনের আধ্যাত্মিক গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553603+00:00",
+    "updated_at": "2026-09-17T12:35:16.553605+00:00"
+  },
+  {
+    "id": "GEN000010",
+    "uuid": "de4d0540-ffbc-4f23-bfc3-a7f6aa36b889",
+    "name_bn": "ভাটিয়ালি",
+    "name_en": "Bhatiyali",
+    "category": "folk",
+    "description": "নদীমাতৃক বাংলার মাঝিমাল্লাদের গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553612+00:00",
+    "updated_at": "2026-09-17T12:35:16.553614+00:00"
+  },
+  {
+    "id": "GEN000011",
+    "uuid": "c8f55531-8333-446b-a0a8-5aeb1b0ec3ed",
+    "name_bn": "ভাওয়াইয়া",
+    "name_en": "Bhawaiya",
+    "category": "folk",
+    "description": "উত্তরবঙ্গের ঐতিহ্যবাহী গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553621+00:00",
+    "updated_at": "2026-09-17T12:35:16.553623+00:00"
+  },
+  {
+    "id": "GEN000012",
+    "uuid": "7e4f1aa3-f104-4189-a58b-7cf8e983076b",
+    "name_bn": "দেশাত্মবোধক",
+    "name_en": "Patriotic Song",
+    "category": "patriotic",
+    "description": "দেশ ও মাতৃভূমির প্রতি ভালোবাসার গান",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553629+00:00",
+    "updated_at": "2026-09-17T12:35:16.553631+00:00"
+  },
+  {
+    "id": "GEN000013",
+    "uuid": "e4a7c29d-be49-4525-86f4-439d788b0fce",
+    "name_bn": "শ্যামাসংগীত",
+    "name_en": "Shyama Sangeet",
+    "category": "devotional",
+    "description": "মা শ্যামা/কালী ভক্তিগীতি",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553638+00:00",
+    "updated_at": "2026-09-17T12:35:16.553640+00:00"
+  },
+  {
+    "id": "GEN000014",
+    "uuid": "9262a5e4-26aa-4390-99f5-c71804869a2a",
+    "name_bn": "কীর্তন",
+    "name_en": "Kirtan",
+    "category": "devotional",
+    "description": "বৈষ্ণব পদাবলী ও হরিনাম সংকীর্তন",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553646+00:00",
+    "updated_at": "2026-09-17T12:35:16.553648+00:00"
+  },
+  {
+    "id": "GEN000015",
+    "uuid": "c91ab42a-8363-4e56-9424-969e6a7717dd",
+    "name_bn": "ব্যান্ড ও রক",
+    "name_en": "Band & Rock",
+    "category": "western",
+    "description": "বাংলা রক ও সমকালীন ব্যান্ড সংগীত",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.553654+00:00",
+    "updated_at": "2026-09-17T12:35:16.553657+00:00"
+  },
+  {
+    "id": "GEN000016",
+    "uuid": "c21fed3c-0a9d-4c0d-a915-de15f55afe8b",
+    "name_bn": "নজরুল গীতি",
+    "name_en": "Njrul Giti",
+    "category": "semi_classical",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.558625+00:00",
+    "updated_at": "2026-09-17T12:35:16.558639+00:00"
+  },
+  {
+    "id": "GEN000017",
+    "uuid": "532828fc-1760-4ee6-ac49-1c6a7fa55f53",
+    "name_bn": "আধুনিক",
+    "name_en": "Adhunik",
+    "category": "modern",
+    "verification_status": "verified",
+    "source_ids": [
+      "SRC000001"
+    ],
+    "created_at": "2026-09-17T12:35:16.558963+00:00",
+    "updated_at": "2026-09-17T12:35:16.558968+00:00"
+  }
+]

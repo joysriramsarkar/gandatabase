@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "work.schema.json",
+  "title": "Work",
+  "description": "একটি সৃষ্টিকর্ম (গান, কবিতা, বাদ্যযন্ত্র রচনা ইত্যাদি)। একই গানের অসংখ্য recording থাকতে পারে।",
+  "type": "object",
+  "required": ["id", "title_bn", "type", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^WORK\\d{6}$",
+      "description": "Display identifier: WORK000001"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "title_bn": {
+      "type": "string",
+      "description": "বাংলায় শিরোনাম"
+    },
+    "title_en": {
+      "type": ["string", "null"],
+      "description": "English title"
+    },
+    "title_hi": {
+      "type": ["string", "null"],
+      "description": "Other language titles",
+      "note": "Extended for multi-lingual"
+    },
+    "language": {
+      "type": "string",
+      "description": "Primary language code",
+      "pattern": "^[a-z]{2,5}$"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["song", "poem", "instrumental", "oratorio", "operetta", "other"],
+      "description": "সৃষ্টিকর্মের ধরন"
+    },
+    "subtype": {
+      "type": ["string", "null"],
+      "description": "More specific classification (e.g., \"রবীন্দ্রসংগীত\")"
+    },
+    "genre": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Genre tags",
+      "uniqueItems": true
+    },
+    "lyricist": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^ART\\d{6}$" },
+      "description": "গীতিকারের ART ID"
+    },
+    "composer": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^ART\\d{6}$" },
+      "description": "সুরকারের ART ID"
+    },
+    "year": {
+      "type": ["integer", "null"],
+      "description": "সৃষ্টির সাল",
+      "minimum": 1000,
+      "maximum": 2100
+    },
+    "year_accuracy": {
+      "type": ["string", "null"],
+      "enum": ["exact", "approximate", "estimated", null],
+      "description": "সালের নির্ভরযোগ্যতা"
+    },
+    "lyrics_id": {
+      "type": ["string", "null"],
+      "pattern": "^LYR\\d{6}$",
+      "description": "Associated lyrics ID"
+    },
+    "subjects": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "বিষয় শ্রেণিবিভাগ (আত্মনির্ভরতা, প্রেম, প্রকৃতি ইত্যাদি)",
+      "uniqueItems": true
+    },
+    "parjaay": {
+      "type": ["object", "null"],
+      "description": "গানের পর্যায়/শ্রেণিবিভাগ (বিস্তারিত সংজ্ঞা: category + sub_category)",
+      "properties": {
+        "category": { "type": "string" },
+        "sub_category": { "type": ["string", "null"] }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "recording_ids": {
+      "type": "array",
+      "description": "এই work এর সমস্ত recording",
+      "items": { "type": "string", "pattern": "^REC\\d{6}$" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "data_origin": {
+      "type": "string",
+      "enum": ["human", "ai_suggestion", "musicbrainz", "wikidata", "manual"]
+    },
+    "ai_confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "editor", "action"],
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "editor": { "type": "string" },
+          "action": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

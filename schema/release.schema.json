@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "release.schema.json",
+  "title": "Release",
+  "description": "একটি Release (Album, Film, Single, Compilation ইত্যাদি)। Recording এর container।",
+  "type": "object",
+  "required": ["id", "title", "type", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^REL\\d{6}$",
+      "description": "Display identifier: REL000001"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": ["string", "null"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["album", "film", "single", "compilation", "soundtrack", "ep", "mixtape", "other"]
+    },
+    "year": {
+      "type": ["integer", "null"],
+      "minimum": 1800,
+      "maximum": 2100
+    },
+    "year_accuracy": {
+      "type": ["string", "null"],
+      "enum": ["exact", "approximate", "estimated", null]
+    },
+    "country": {
+      "type": ["string", "null"],
+      "description": "ISO 3166-1 alpha-2",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "language": {
+      "type": "string",
+      "description": "Primary language code"
+    },
+    "label_id": {
+      "type": ["string", "null"],
+      "pattern": "^LAB\\d{6}$",
+      "description": "Record label"
+    },
+    "director_id": {
+      "type": ["string", "null"],
+      "pattern": "^ART\\d{6}$",
+      "description": "Film director (if type=film)"
+    },
+    "recording_ids": {
+      "type": "array",
+      "description": "এই release এর সমস্ত recording",
+      "items": { "type": "string", "pattern": "^REC\\d{6}$" }
+    },
+    "track_list": {
+      "type": "array",
+      "description": "Track listing with positions",
+      "items": {
+        "type": "object",
+        "required": ["recording_id"],
+        "properties": {
+          "recording_id": { "type": "string", "pattern": "^REC\\d{6}$" },
+          "track_number": { "type": ["integer", "null"], "minimum": 1 },
+          "disc_number": { "type": ["integer", "null"], "minimum": 1 },
+          "title": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "cover_image": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "barcode": {
+      "type": ["string", "null"]
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "data_origin": {
+      "type": "string",
+      "enum": ["human", "ai_suggestion", "musicbrainz", "wikidata", "manual"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "editor", "action"],
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "editor": { "type": "string" },
+          "action": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

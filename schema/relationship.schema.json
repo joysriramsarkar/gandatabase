@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "relationship.schema.json",
+  "title": "Relationship",
+  "description": "Entity-এর মধ্যে many-to-many relationship table।",
+  "type": "object",
+  "required": ["id", "entity_a_type", "entity_a_id", "entity_b_type", "entity_b_id", "relationship_type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^RELNSH\\d{6}$"
+    },
+    "entity_a_type": {
+      "type": "string",
+      "enum": ["artist", "work", "recording", "release", "film", "lyrics", "genre", "language", "label", "source", "alias"]
+    },
+    "entity_a_id": {
+      "type": "string",
+      "description": "Artst ID of entity A"
+    },
+    "entity_b_type": {
+      "type": "string",
+      "enum": ["artist", "work", "recording", "release", "film", "lyrics", "genre", "language", "label", "source", "alias"]
+    },
+    "entity_b_id": {
+      "type": "string",
+      "description": "ID of entity B"
+    },
+    "relationship_type": {
+      "type": "string",
+      "enum": [
+        "composed", "wrote_lyrics", "performed", "sung_by",
+        "directed", "produced", "acted_in", "music_directed",
+        "released_in", "part_of", "featured_in",
+        "recorded_by", "published_by", "belongs_to",
+        "associated_with", "influenced_by", "sequel_to",
+        "translated_to", "alternate_version_of", "arranged_by"
+      ]
+    },
+    "role": {
+      "type": ["string", "null"],
+      "description": "সুনির্দিষ্ট ভূমিকা (join phrase) (যেমন: \"lead vocals\", \"composer\")"
+    },
+    "source_id": {
+      "type": ["string", "null"],
+      "pattern": "^SRC\\d{6}$"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

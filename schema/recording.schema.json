@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "recording.schema.json",
+  "title": "Recording",
+  "description": "একটি নির্দিষ্ট recording (একই গানের বিভিন্ন শিল্পীর কণ্ঠে recording)।",
+  "type": "object",
+  "required": ["id", "work_id", "title", "artists", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^REC\\d{6}$",
+      "description": "Display identifier: REC000001"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "work_id": {
+      "type": "string",
+      "pattern": "^WORK\\d{6}$",
+      "description": "Related work"
+    },
+    "title": {
+      "type": "string",
+      "description": "এই recording-এর শিরোনাম (সাধারণত work এর শিরোনামই হবে)"
+    },
+    "title_en": {
+      "type": ["string", "null"]
+    },
+    "artists": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^ART\\d{6}$" },
+      "description": "এই recording এ অংশগ্রহণকারী শিল্পী",
+      "minItems": 1
+    },
+    "artist_roles": {
+      "type": "object",
+      "description": "শিল্পী-এর specific ভূমিকা mapping",
+      "patternProperties": {
+        "^ART\\d{6}$": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "duration_ms": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "দৈর্ঘ্য milliseconds তে"
+    },
+    "recording_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Recording happened তারিখ"
+    },
+    "release_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Release তারিখ"
+    },
+    "isrc": {
+      "type": ["string", "null"],
+      "description": "International Standard Recording Code"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code"
+    },
+    "genre": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "label_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^LAB\\d{6}$" },
+      "description": "Record label"
+    },
+    "official_links": {
+      "type": "array",
+      "description": "External audio/video links (YouTube, Spotify, etc.)",
+      "items": {
+        "type": "object",
+        "required": ["platform", "url"],
+        "properties": {
+          "platform": { "type": "string", "enum": ["YouTube", "Spotify", "Apple Music", "Gaana", "JioSaavn", "SoundCloud", "Dailymotion", "NetEase", "other"] },
+          "url": { "type": "string", "format": "uri" },
+          "version": { "type": ["string", "null"] },
+          "is_official": { "type": "boolean", "default": true }
+        }
+      }
+    },
+    "album_track": {
+      "type": "object",
+      "description": "If this recording is part of an album",
+      "properties": {
+        "release_id": { "type": "string", "pattern": "^REL\\d{6}$" },
+        "track_number": { "type": ["integer", "null"], "minimum": 1 },
+        "disc_number": { "type": ["integer", "null"], "minimum": 1 }
+      }
+    },
+    "film_ids": {
+      "type": "array",
+      "description": "এই recording কোথায় ব্যবহৃত হয়েছে",
+      "items": { "type": "string", "pattern": "^FILM\\d{6}$" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "data_origin": {
+      "type": "string",
+      "enum": ["human", "ai_suggestion", "musicbrainz", "wikidata", "manual"]
+    },
+    "ai_confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "editor", "action"],
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "editor": { "type": "string" },
+          "action": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

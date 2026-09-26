@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "source.schema.json",
+  "title": "Source",
+  "description": "প্রতিটি তথ্যের উৎস। যাচাইযোগ্যতা ও reliability রাখা হয়।",
+  "type": "object",
+  "required": ["id", "type", "title"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^SRC\\d{6}$"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "book", "article", "magazine", "website", "album_cover",
+        "lp_booklet", "cd_booklet", "interview", "radio_archive",
+        "publisher_catalogue", "trusted_website", "musicbrainz",
+        "wikidata", "wikipedia", "youtube_description",
+        "personal_archive", "other"
+      ],
+      "description": "উৎসের ধরন"
+    },
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": ["string", "null"]
+    },
+    "publisher": {
+      "type": ["string", "null"]
+    },
+    "year": {
+      "type": ["integer", "null"],
+      "minimum": 1700,
+      "maximum": 2100
+    },
+    "url": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "isbn": {
+      "type": ["string", "null"]
+    },
+    "reliability": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "উৎসের বিশ্বস্ততা"
+    },
+    "notes": {
+      "type": ["string", "null"]
+    },
+    "accessed_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

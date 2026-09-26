@@ -1,0 +1,26 @@
+name: Gandatabase v2 CI Validation
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install jsonschema pytest
+      - name: Run 4-Level Schema & Reference Validation
+        run: |
+          python scripts/validate/validate.py --data-dir data --schema-dir schema
+      - name: Run Test Suite
+        run: |
+          pytest tests/test_v2.py

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "SRC000001",
+    "uuid": "fc0a6be5-ad32-418d-a6b6-1bfdff843912",
+    "type": "trusted_website",
+    "title": "গানডাটাবেস ডিজিটাল সংগীত সংরক্ষণাগার (Gandatabase Archive)",
+    "author": "গানডাটাবেস টিম ও গবেষকবৃন্দ",
+    "publisher": "Bangla Gan Knowledge Platform",
+    "year": 2026,
+    "url": "https://banglagan.org",
+    "reliability": "high",
+    "verification_status": "verified",
+    "created_at": "2026-09-17T12:35:16.513676+00:00",
+    "updated_at": "2026-09-17T12:35:16.513699+00:00"
+  },
+  {
+    "id": "SRC000002",
+    "uuid": "9bc5ff62-0daf-486b-b1a6-4619b5d1802f",
+    "type": "book",
+    "title": "গীতবিতান (অখণ্ড সংস্করণ)",
+    "author": "রবীন্দ্রনাথ ঠাকুর",
+    "publisher": "বিশ্বভারতী গ্রন্থনবিভাগ",
+    "year": 1931,
+    "reliability": "high",
+    "verification_status": "verified",
+    "created_at": "2026-09-17T12:35:16.513723+00:00",
+    "updated_at": "2026-09-17T12:35:16.513726+00:00"
+  },
+  {
+    "id": "SRC000003",
+    "uuid": "78e0e6c4-2045-4024-a13f-e33f3d862485",
+    "type": "book",
+    "title": "নজরুল-সংগীত সংগ্রহ",
+    "author": "কাজী নজরুল ইসলাম",
+    "publisher": "নজরুল ইনস্টিটিউট, ঢাকা",
+    "year": 1985,
+    "reliability": "high",
+    "verification_status": "verified",
+    "created_at": "2026-09-17T12:35:16.513738+00:00",
+    "updated_at": "2026-09-17T12:35:16.513740+00:00"
+  }
+]

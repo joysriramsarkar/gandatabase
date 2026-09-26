@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "artist.schema.json",
+  "title": "Artist",
+  "description": "একজন শিল্পী (গায়ক, সুরকার, গীতিকার, পরিচালক ইত্যাদি) এর প্রোফাইল।",
+  "type": "object",
+  "required": ["id", "name_bn", "type", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Display identifier. Example: ART000001",
+      "pattern": "^ART\\d{6}$"
+    },
+    "uuid": {
+      "type": "string",
+      "description": "Internal UUID for system use",
+      "format": "uuid"
+    },
+    "name_bn": {
+      "type": "string",
+      "description": "বাংলায় নাম"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "English name (transliterated/standard)"
+    },
+    "aliases": {
+      "type": "array",
+      "description": "বিকল্প নাম, ডাকনাম, বানান ভিন্নতা",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "type": {
+      "type": "string",
+      "description": "Entity type",
+      "enum": ["person", "group", "organization"]
+    },
+    "gender": {
+      "type": ["string", "null"],
+      "enum": ["male", "female", "other", null]
+    },
+    "birth_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "YYYY-MM-DD format, or null if unknown"
+    },
+    "death_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "YYYY-MM-DD format, or null if alive/unknown"
+    },
+    "birth_place_id": {
+      "type": ["string", "null"],
+      "description": "Reference to a place entity"
+    },
+    "death_place_id": {
+      "type": ["string", "null"],
+      "description": "Reference to a place entity"
+    },
+    "roles": {
+      "type": "array",
+      "description": "এই শিল্পীর ভূমিকা",
+      "items": {
+        "type": "string",
+        "enum": [
+          "singer", "composer", "music_director", "lyricist",
+          "actor", "director", "producer", "instrumentalist",
+          "conductor", "dancer", "writer", "poet"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "genres": {
+      "type": "array",
+      "description": "সংগৃহীত ঘরানা",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "bio": {
+      "type": ["string", "null"],
+      "description": "জীবনীতর্ভূতি (Verified হলে প্রকাশ্যে দেখানো যাবে)"
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "external_ids": {
+      "type": "object",
+      "description": "Externally database IDs",
+      "properties": {
+        "musicbrainz": { "type": ["string", "null"] },
+        "wikidata": { "type": ["string", "null"] },
+        "isni": { "type": ["string", "null"] },
+        "spotify": { "type": ["string", "null"] },
+        "youtube_music": { "type": ["string", "null"] },
+        "imdb": { "type": ["string", "null"] },
+        "discogs": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "active_years": {
+      "type": ["string", "null"],
+      "description": "যেমন: \"1940-1990\"",
+      "pattern": "^\\d{4}(-\\d{4})?$"
+    },
+    "source_ids": {
+      "type": "array",
+      "description": "এই তথ্যের উৎস",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"],
+      "description": "বিশেষ তথ্যের যাচাই অবস্থা"
+    },
+    "data_origin": {
+      "type": "string",
+      "enum": ["human", "ai_suggestion", "musicbrainz", "wikidata", "manual"],
+      "description": "তথ্য কোথা থেকে এলো"
+    },
+    "ai_confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "AI suggestion confidence (0-1), null if human"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Wikipedia-style revision history",
+      "items": {
+        "type": "object",
+        "required": ["date", "editor", "action"],
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "editor": { "type": "string" },
+          "action": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

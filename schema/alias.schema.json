@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "alias.schema.json",
+  "title": "Alias / Normalization Entry",
+  "description": "বাংলা ↔ ইংরেজি transliteration, aliases, spelling variants, search tokens।",
+  "type": "object",
+  "required": ["id", "entity_type", "entity_id", "alias_text", "alias_type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ALIAS\\d{6}$"
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": ["artist", "work", "recording", "release", "film", "genre", "language", "source", "lyricist", "composer"]
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "Owner entity's display ID (ART000001, WORK000001, etc.)"
+    },
+    "alias_text": {
+      "type": "string",
+      "description": "The actual alias or variant text"
+    },
+    "alias_type": {
+      "type": "string",
+      "enum": [
+        "canonical", "alternate_spelling", "transliteration_bn_to_en",
+        "transliteration_en_to_bn", "nickname", "stage_name",
+        "normalized", "search_token", "romanized", "common_misspelling"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "description": "Language of the alias text",
+      "enum": ["bn", "en", "hi", "other"]
+    },
+    "script": {
+      "type": ["string", "null"],
+      "enum": ["bengali", "latin", "devanagari", "other"]
+    },
+    "source_id": {
+      "type": ["string", "null"],
+      "pattern": "^SRC\\d{6}$"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "lyrics.schema.json",
+  "title": "Lyrics",
+  "description": "গানের কথা। স্বতঃস্বত্ব তথ্য আলাদা রাখা হয়েছে। metadata = public, lyrics = rights-dependent",
+  "type": "object",
+  "required": ["id", "language", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LYR\\d{6}$",
+      "description": "Display identifier: LYR000001"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "work_id": {
+      "type": ["string", "null"],
+      "pattern": "^WORK\\d{6}$",
+      "description": "Related work"
+    },
+    "recording_id": {
+      "type": ["string", "null"],
+      "pattern": "^REC\\d{6}$",
+      "description": "Related recording (optional)"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code (bn, hi, en, etc.)"
+    },
+    "text": {
+      "type": "string",
+      "description": "Full lyrics text. Note: May be restricted based on copyright."
+    },
+    "text_preview": {
+      "type": ["string", "null"],
+      "description": "Public-safe preview (first 2-3 lines)"
+    },
+    "copyright_status": {
+      "type": "string",
+      "enum": ["public", "restricted", "pending_review", "expired"],
+      "description": "স্বতঃস্বত্ব অবস্থা"
+    },
+    "copyright_holder": {
+      "type": ["string", "null"],
+      "description": "স্বত্বধারী"
+    },
+    "transcription_status": {
+      "type": "string",
+      "enum": ["verified", "pending", "draft", "needs_review"],
+      "description": "লিপ্যন্তর অবস্থা"
+    },
+    "source": {
+      "type": ["string", "null"],
+      "description": "Primary lyrics source description"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": ["string", "null"]
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "data_origin": {
+      "type": "string",
+      "enum": ["human", "ai_suggestion", "manual", "musicbrainz", "wikidata"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "editor", "action"],
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "editor": { "type": "string" },
+          "action": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "label.schema.json",
+  "title": "Label",
+  "description": "Record label / production company / publisher",
+  "type": "object",
+  "required": ["id", "name", "verification_status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LAB\\d{6}$"
+    },
+    "name_bn": {
+      "type": ["string", "null"]
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["record_label", "production_house", "publisher", "distributor", "studio", "other"]
+    },
+    "founded_year": {
+      "type": ["integer", "null"],
+      "minimum": 1800,
+      "maximum": 2100
+    },
+    "country": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Z]{2}$"
+    },
+    "location": {
+      "type": ["string", "null"]
+    },
+    "website": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "external_ids": {
+      "type": "object",
+      "properties": {
+        "discogs": { "type": ["string", "null"] },
+        "wikidata": { "type": ["string", "null"] },
+        "musicbrainz": { "type": ["string", "null"] }
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

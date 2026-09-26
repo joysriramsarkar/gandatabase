@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "language.schema.json",
+  "title": "Language",
+  "description": "ভাষা ও আঞ্চলিক সংস্কৃতি রেফারেন্স। বাংলা ছাড়াও নেপালি, সাঁওতালি, রাজবংশী ইত্যাদি রাখা হবে।",
+  "type": "object",
+  "required": ["id", "code", "name_bn"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LANG\\d{6}$"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "code": {
+      "type": "string",
+      "description": "Language code (ISO 639-1/2/3)",
+      "pattern": "^[a-z]{2,5}$"
+    },
+    "name_bn": {
+      "type": "string",
+      "description": "বাংলায় নাম (বাংলা, রাজবংশী, নেপালি)"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "English name"
+    },
+    "script": {
+      "type": ["string", "null"],
+      "description": "লিপি (Bengali, Devanagari, Latin, etc.)"
+    },
+    "region": {
+      "type": ["string", "null"],
+      "description": "প্রধান অঞ্চল (West Bengal, Bangladesh, Tripura, etc.)"
+    },
+    "cultural_region": {
+      "type": ["string", "null"],
+      "description": "সাংস্কৃতিক অঞ্চল (উত্তরবঙ্গ, প্রবাসী, etc.)"
+    },
+    "is_official": {
+      "type": "boolean",
+      "description": "কোনো সরকারি ভাষা কিনা"
+    },
+    "related_languages": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^LANG\\d{6}$" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC\\d{6}$" },
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "in_review", "verified", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

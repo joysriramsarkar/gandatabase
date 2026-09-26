@@ -1,0 +1,18 @@
+[
+  {
+    "id": "LANG000001",
+    "uuid": "eba4d5ab-4f99-45f9-8624-dcd9d786328a",
+    "code": "bn",
+    "name_bn": "বাংলা",
+    "name_en": "Bengali",
+    "cultural_region": "Bengal"
+  },
+  {
+    "id": "LANG000002",
+    "uuid": "848a6953-5abb-430d-920e-7a72aa4cf7ce",
+    "code": "rjb",
+    "name_bn": "রাজবংশী",
+    "name_en": "Rajbanshi",
+    "cultural_region": "North Bengal"
+  }
+]
